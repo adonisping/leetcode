@@ -159,8 +159,12 @@ DFS程序模版
 305	Number of Islands II
 323 Number of Connected Components in an Undirected Graph  
   
-合并邮件问题：  名字名字
-  
+合并邮件问题:  
+zhege  1@smu.edu 2@gmail.com
+qifei  11@smu.edu
+lizhe  1@smu.edu  
+输出结果  [zhege, lizhe], [qifei]
+
   
 8.Binary Indexed Tree问题____________________________________________
 307. Range Sum Query - Mutable
