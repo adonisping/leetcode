@@ -215,8 +215,11 @@ lizhe  1@smu.edu
 输出结果  [zhege, lizhe], [qifei]    
 解法： 邮箱到人通过hash表 + 人合并通过union find来做
   
-8.Binary Indexed Tree问题____________________________________________
-  
+8.Binary Indexed Tree问题____________________________________________  
+
+*303. Range Sum Query - Immutable 
+区间求和／集合／最值问题
+http://sighingnow.github.io/resource/binary_index_trees/binary_index_trees_1.png  
 307. Range Sum Query - Mutable  
     def __init__(self, nums):
         self.nums = [0 for _ in nums]
@@ -244,9 +247,33 @@ lizhe  1@smu.edu
         return self.leftSum(j) - self.leftSum(i-1)  
           
           
-315. Count of Smaller Numbers After Self
-308 Range Sum Query 2D - Mutable
-493. Reverse Pairs
+315. Count of Smaller Numbers After Self  
+之前说过二分的做法  
+如果用这个方法，需要对里面的值进行离散化（排序，然后从1开始数），然后把数值作为数的下标，那到一个数先查range，然后+1
+
+*304. Range Sum Query 2D - Immutable  
+注意矩阵求和的处理技巧：   
+1.和一纬的一样，多一行和一列  2.如何左上角   3.如何利用已有算累计和
+
+308 Range Sum Query 2D - Mutable   
+二维的  
+https://discuss.leetcode.com/uploads/files/1475260639048-screen-shot-2016-09-30-at-2.36.01-pm.png
+    public void update(int row, int col, int val) {
+        if (m == 0 || n == 0) return;
+        int delta = val - nums[row][col];
+        nums[row][col] = val;
+        for (int i = row + 1; i <= m; i += i & (-i)) {
+            for (int j = col + 1; j <= n; j += j & (-j)) {
+                tree[i][j] += delta;
+            }
+        }
+    }
+
+493. Reverse Pairs  
+315的变种
+
+
+ 
 
 9.segment tree____________________________________________________
 
