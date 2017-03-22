@@ -192,12 +192,22 @@ def component(n, edges):
        p[n2], n = n1, n, n - 1
   return n
   
-130. Surrounded Regions
-200. Number of Islands
-261 Graph Valid Tree
-305	Number of Islands II
-323 Number of Connected Components in an Undirected Graph  
+  followup: 如何返回几大联通的区域
   
+130. Surrounded Regions  
+union find： 通过unionfind找出所有的联通0，如果四个方向有相当于有个虚拟的边，然后去掉四周的0区域，剩下的就是需要的区域  
+更好的解法: 通过四周BFS或者dfs0换成其他字符#，然后遍历矩阵变0为1，然后讲#变回0
+  
+200. Number of Islands   
+union find： 类似130，对所有联通的1进行合并。求1的数目    
+其他解法： 对每个点进行dfs，dfs过程中把这个点变为0
+
+261 Graph Valid Tree  两个条件必须满足： 
+1.联通分量数为1《=》边的数目是n-1 2.不能有环 边上的两个点通过并查集不联通
+
+305	Number of Islands II  
+添加一块陆地那么陆地数目加1，但是可能与四周联通，分别与四周比较，如果发现不联通就进行合并，并且数目减少1
+    
 合并邮件问题:  
 zhege  1@smu.edu 2@gmail.com
 qifei  11@smu.edu
