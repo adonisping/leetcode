@@ -303,12 +303,52 @@ https://i.stack.imgur.com/OO7LN.jpg
 
 10.Trie Tree___________________________________
 
-
-
-
-
+208. Implement Trie (Prefix Tree)  
+    def insert(self, word):
+        cur = self.root
+        for w in word:
+            cur = cur.children.setdefault(w, TrieNode())
+        cur.isWord = True
+        
+    def search(self, word):
+        cur = self.root
+        for w in word:
+            if w not in cur.children:
+                return False
+            cur = cur.children[w]
+        return cur.isWord
+        
+    def startsWith(self, prefix):
+        cur = self.root
+        for w in prefix:
+            if w not in cur.children:
+                return False
+            cur = cur.children[w]
+        return True
+  
+  211. Add and Search Word - Data structure design
+      简化写法  
+      def __init__(self):
+        self.root = {}
+        
+      def addWord(self, word):
+        node = self.root
+        for c in word:
+            node = node.setdefault(c, {})
+        node['#'] = '#'
+      
+   *79. Word Search  
+   典型的DFS
+   212. Word Search II
+   先把字典建立trie tree，然后对矩阵中每个节点用trie去搜
+   
+   336. Palindrome Pairs   
+   hashmap解法
+   trie解法，原理：字符串的反序是能构成palindrom的前缀，trienode中存放该节点下面的树的总数。 拿每个字符串的逆序去查询它的前缀有多少个。
+   
 
 11.后缀树___________________________________
-
-
-
+   后缀数组的简化解法
+   求字符串中最长的重复字串  如abcdefgabcabcdffea  返回abcd
+   followup:
+   如果要求返回的串必须是连续的怎么办？通过下标控制，必须相邻，能否重合
