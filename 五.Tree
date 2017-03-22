@@ -216,7 +216,34 @@ lizhe  1@smu.edu
 解法： 邮箱到人通过hash表 + 人合并通过union find来做
   
 8.Binary Indexed Tree问题____________________________________________
-307. Range Sum Query - Mutable
+  
+307. Range Sum Query - Mutable  
+    def __init__(self, nums):
+        self.nums = [0 for _ in nums]
+        self.sms = [0 for _ in range(len(nums) + 1)]
+        for i,m in enumerate(nums):
+            self.update(i, m)
+    
+    def update(self, i, val):
+        diff = val - self.nums[i]
+        j = i + 1
+        while j < len(self.sms):
+            self.sms[j] += diff
+            j += j & -j
+        self.nums[i] = val
+        return val
+    
+    def leftSum(self, i):
+        j, res = i + 1, 0
+        while j > 0:
+            res += self.sms[j]
+            j -= j & -j
+        return res
+        
+    def sumRange(self, i, j):
+        return self.leftSum(j) - self.leftSum(i-1)  
+          
+          
 315. Count of Smaller Numbers After Self
 308 Range Sum Query 2D - Mutable
 493. Reverse Pairs
