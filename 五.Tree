@@ -151,8 +151,47 @@ DFS程序模版
 
 7.Union Find问题______________________________________________________
 323	Number of Connected Components in an Undirected Graph  
+methods:  
+union()  
+public void union(int p, int q)  
+{   
+    // Give p and q the same root.  
+    int pRoot = find(p);  
+    int qRoot = find(q);  
+    if (pRoot == qRoot)   
+        return;  
+    id[pRoot] = qRoot;    // 将一颗树(即一个组)变成另外一课树(即一个组)的子树  
+    count--;  
+}  
+  
+find()   
+private int find(int p)  
+{  
+    while (p != id[p])  
+    {  
+        // 将p节点的父节点设置为它的爷爷节点  
+        id[p] = id[id[p]];  
+        p = id[p];  
+    }  
+    return p;  
+}  
 了解路径压缩算法   
-
+  
+connect()  
+public boolean connected(int p, int q)  
+{ return find(p) == find(q); }  
+  
+  
+吊炸天写法  
+def component(n, edges):  
+  p = list(range(n))  
+  for n1, n2 in edges:  
+    while p[n1] != n1: n1 = p[n1]  
+    while p[n2] != n2: n2 = p[n2]  
+    if n1 != n2: 
+       p[n2], n = n1, n, n - 1
+  return n
+  
 130. Surrounded Regions
 200. Number of Islands
 261 Graph Valid Tree
@@ -163,8 +202,8 @@ DFS程序模版
 zhege  1@smu.edu 2@gmail.com
 qifei  11@smu.edu
 lizhe  1@smu.edu  
-输出结果  [zhege, lizhe], [qifei]
-
+输出结果  [zhege, lizhe], [qifei]    
+解法： 邮箱到人通过hash表 + 人合并通过union find来做
   
 8.Binary Indexed Tree问题____________________________________________
 307. Range Sum Query - Mutable
