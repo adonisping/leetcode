@@ -1,7 +1,7 @@
 五.
 Tree
 
-1.遍历__________________________________________________________________________________________________________________________________________
+1.遍历_____________________________________________________________________________________________________
  
 递归的三要素
  结束条件：也子节点，根节点
@@ -136,11 +136,11 @@ DFS程序模版
   如果不确定两个节点是否在树中存在怎么办
   如果有父节点指针怎么办
   多叉树怎么办
-   找到多个人
+  找到多个人
 
-   Find ancestors of given node in a Binary Tree
-
-
+  Find ancestors of given node in a Binary Tree
+  
+  
 6.AST问题____________________________________________________________
 224. Basic Calculator
 227. Basic Calculator II
@@ -149,15 +149,20 @@ DFS程序模版
 构建树——后续遍历得到逆波兰———栈解决（解释模式）
 或者递归直接求解
 
-
 7.Union Find问题______________________________________________________
-323	Number of Connected Components in an Undirected Graph
+323	Number of Connected Components in an Undirected Graph  
+了解路径压缩算法   
+
 130. Surrounded Regions
 200. Number of Islands
 261 Graph Valid Tree
 305	Number of Islands II
-323 Number of Connected Components in an Undirected Graph
+323 Number of Connected Components in an Undirected Graph  
+  
+合并邮件问题：  
 
+  
+  
 8.Binary Indexed Tree问题____________________________________________
 307. Range Sum Query - Mutable
 315. Count of Smaller Numbers After Self
