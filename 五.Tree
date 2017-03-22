@@ -273,12 +273,40 @@ https://discuss.leetcode.com/uploads/files/1475260639048-screen-shot-2016-09-30-
 315的变种
 
 
+9.segment tree____________________________________________________ 
+解决区间／线段上的最值／集合等问题  RMQ问题
+http://www.cnblogs.com/wuyudong/p/segment-tree.html  
+1.构建  
+2.更新  
+3.查询，每层最多2个继续往下走
+
+307. Range Sum Query - Mutable  
+308	Range Sum Query 2D - Mutable  
+https://i.stack.imgur.com/RLasZ.png  
+3Dsegment Tree
+https://i.stack.imgur.com/OO7LN.jpg
+
+239. Sliding Window Maximum    
+最小队列／最大队列问题  
+也可以用这个来做
+
+315. Count of Smaller Numbers After Self   
+注意查询条件的变化，如果树节点的值（最大值）小于当前值，那么直接算入范围，否则要二分查找
+493. Reverse Pairs 
+
+218. The Skyline Problem  
+如果x轴范围很大，需要离散化    
+扫描线+左节点更新值，右节点更新为0，同时查询整颗树的最大值
+
+253. Meeting Rooms II
  
 
-9.segment tree____________________________________________________
-
-
 10.Trie Tree___________________________________
+
+
+
+
+
 
 11.后缀树___________________________________
 
