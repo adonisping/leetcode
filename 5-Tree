@@ -437,3 +437,6 @@ hashmap统计出现次数  queue维护出现次数  每次从queue中popk个最�
 451. Sort Characters By Frequency  
 hashmap统计出现次数
 
+502. IPO   
+贪心+队列
+378. Kth Smallest Element in a Sorted Matrix
