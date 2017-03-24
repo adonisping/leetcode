@@ -1,1 +1,24 @@
 permutation + subset + combination
+
+
+39. Combination Sum  
+对每一个数字取或者不取两种情况 
+另一种画出虚拟的递归树，边为选择，所有的节点就是所有组合的情况
+        res, path = [], []
+        candidates.sort()
+        self.comb(0, candidates, target, 0, path, res)
+        return res
+    
+    def comb(self, i, cands, target, sm, path, res):
+        if sm == target:
+            res.append(path[:])
+            return 
+        if sm > target:
+            return 
+        for k in range(i, len(cands)):
+            path.append(cands[k])
+            self.comb(k, cands, target, sm + cands[k], path, res)
+            path.pop()
+技巧：
+res，path两个引用传递  
+提前减枝
