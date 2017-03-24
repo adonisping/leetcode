@@ -440,3 +440,5 @@ hashmap统计出现次数
 502. IPO   
 贪心+队列
 378. Kth Smallest Element in a Sorted Matrix
+
+k closest points to (0,0)
