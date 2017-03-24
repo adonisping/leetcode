@@ -370,6 +370,39 @@ heapify()
 pop()
 push()
 
+
 23. Merge k Sorted Lists   
 二分法   
-heap法，代码熟练掌握，类似的
+heap法，代码熟练掌握，类似的写法有很多 
+
+        q = [(lst.val, lst) for lst in lists if lst]
+        heapq.heapify(q)
+        dummy = p = ListNode(0)
+        while q:
+            _, node = heapq.heappop(q)
+            p.next, p = node, node
+            if node.next:
+                heapq.heappush(q, (node.next.val, node.next))
+        return dummy.next
+
+215. Kth Largest Element in an Array   
+quick select方法   
+heapify  然后pop k - 1个元素
+
+218. The Skyline Problem     
+用的很巧，因为只关注栈顶的元素，栈内部的元素在滑动窗口外部没有关系
+
+239. Sliding Window Maximum   
+思想同上一题，左指针收缩的时候判断栈顶元素距离当前元素的距离，大于k弹出
+
+253	Meeting Rooms II     
+利用queue获取当前最早的结束时间
+
+*263. Ugly Number  
+
+*264. Ugly Number II
+虚拟的数组合并问题
+
+313. Super Ugly Number   
+queue中存放 当前的值（用于排序）， 质数（用于生成下一个），res下标
+
