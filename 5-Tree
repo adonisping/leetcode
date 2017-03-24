@@ -374,7 +374,7 @@ push()
 23. Merge k Sorted Lists   
 二分法   
 heap法，代码熟练掌握，类似的写法有很多 
-
+需要搞明白压哪些数据（当前值，生成下一个值需要的参数）
         q = [(lst.val, lst) for lst in lists if lst]
         heapq.heapify(q)
         dummy = p = ListNode(0)
@@ -405,4 +405,35 @@ heapify  然后pop k - 1个元素
 
 313. Super Ugly Number   
 queue中存放 当前的值（用于排序）， 质数（用于生成下一个），res下标
+
+295. Find Median from Data Stream
+
+347. Top K Frequent Elements    
+桶排序  hashmap统计出次数，然后桶排序，桶的大小为数据原数组大小   
+用queue
+
+355. Design Twitter  
+push + poll    
+多个人id的合并
+
+358	Rearrange String k Distance Apart    
+hashmap统计出现次数  queue维护出现次数  每次从queue中popk个最多的字符  然后重新放回queue进行下一轮
+
+378. Kth Smallest Element in a Sorted Matrix
+典型问题，代码要熟悉
+        q = [(matrix[0][0], 0, 0)]
+        for _ in range(k - 1):
+            _, i, j = heapq.heappop(q)
+            if j == 0 and i + 1 < len(matrix):
+                heapq.heappush(q, (matrix[i+1][j], i + 1, j))
+            if j + 1 < len(matrix[0]):
+                heapq.heappush(q, (matrix[i][j+1], i, j + 1))
+        return heapq.heappop(q)[0]
+
+373. Find K Pairs with Smallest Sums    
+
+407. Trapping Rain Water II
+
+451. Sort Characters By Frequency  
+hashmap统计出现次数
 
