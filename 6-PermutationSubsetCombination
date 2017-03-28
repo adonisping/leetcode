@@ -1,9 +1,9 @@
 permutation + subset + combination
 
-
+______________________________________________________
 39. Combination Sum  
-对每一个数字取或者不取两种情况 
-另一种画出虚拟的递归树，边为选择，所有的节点就是所有组合的情况
+a.对每一个数字取或者不取两种情况 
+b.另一种画出虚拟的递归树，边为选择，所有的节点就是所有组合的情况
         res, path = [], []
         candidates.sort()
         self.comb(0, candidates, target, 0, path, res)
@@ -22,3 +22,52 @@ permutation + subset + combination
 技巧：
 res，path两个引用传递  
 提前减枝
+
+
+40. Combination Sum II   
+重复的处理
+
+216. Combination Sum III   
+
+377. Combination Sum IV   
+原始的方法
+动态规划
+
+77. Combinations
+
+17. Letter Combinations of a Phone Number   
+递归  
+迭代
+
+254 Factor Combinations
+
+_________________________________________________________
+
+46. Permutations    
+        if not nums:
+            return []
+        if len(nums) == 1:
+            return [nums]
+        res = []
+        for i,m in enumerate(nums):
+            res += [[m] + it for it in self.permute(nums[:i] + nums[i+1:])]
+        return res
+传统的解法
+
+47. Permutations II
+
+31. Next Permutation    
+last permutation
+
+60. Permutation Sequence
+
+266. Palindrome Permutation   
+
+267  Palindrome Permutation II   
+
+
+
+
+
+
+
