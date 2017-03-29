@@ -68,6 +68,48 @@ last permutation
 484. Find Permutation
 
 
+_________________________________________________________
 
+78. Subsets
 
+        res = [[]]
+        for m in nums:
+            res += [k + [m] for k in res]
+        return res
 
+90. Subsets II
+
+    def subsetsWithDup(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+        """
+        nums.sort()
+        res, l = [[]], 0
+        for i,v in enumerate(nums):
+            if i == 0 or v != nums[i-1]:
+                l = len(res)
+            res += [res[k] + [v] for k in range(len(res) - l, len(res))]
+        return res
+        """
+        
+        nums.sort()
+        path, res = [], []
+        self.swd(res, path, 0, nums)
+        return res
+    
+    def swd(self, res, path, i, nums):
+        res.append(path[:])
+        for k in range(i, len(nums)):
+            if k > i and nums[k] == nums[k-1]:
+                continue
+            path.append(nums[k])
+            self.swd(res, path, k + 1, nums)
+            path.pop()
+            
+ 368. Largest Divisible Subset
+ 
+ 416. Partition Equal Subset Sum
+ 
+ 
