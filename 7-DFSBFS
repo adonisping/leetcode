@@ -1,4 +1,5 @@
-递归问题： 
+本质是暴力破解：
+
 全局缓存（记忆化搜索） + 剪枝   
 
 递归怎么转化为通用的迭代问题：  
@@ -60,4 +61,43 @@ followup: 如果只返回要移除的个数怎么办
 
 546. Remove Boxes
 
+————————————————————————
 
+10. Regular Expression Matching
+
+44. Wildcard Matching
+
+22. Generate Parentheses
+
+37. Sudoku Solver
+
+51. N-Queens
+
+52. N-Queens II
+
+89. Gray Code
+
+93. Restore IP Addresses
+
+*290.Word Pattern  
+
+291.Word Pattern II
+
+294.	Flip Game II
+
+320	Generalized Abbreviation
+
+351	Android Unlock Patterns
+
+401. Binary Watch
+
+411	Minimum Unique Word Abbreviation
+
+425	Word Squares
+
+526. Beautiful Arrangement
+
+————————————————————————————————————————————————————————————————————————————————
+317	Shortest Distance from All Buildings
+
+286	Walls and Gates
