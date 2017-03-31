@@ -15,6 +15,15 @@ while 栈不为空：
     分离出子问题，反向压入栈内
 
     
-133	Clone Graph    
+133.Clone Graph    
 Tree树的copy
+
+301. Remove Invalid Parentheses  
+followup: 如果只返回要移除的个数怎么办
+
+329. Longest Increasing Path in a Matrix    
+记忆化搜索
+
+332. Reconstruct Itinerary
+
 
