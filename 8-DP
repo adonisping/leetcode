@@ -1,0 +1,28 @@
+1.初始化条件
+2.递推公式，子问题推出更大问题·
+
+53. Maximum Subarray
+
+一维：
+典型Fib数列
+70. Climbing Stairs
+
+二维：
+62. Unique Paths
+63. Unique Paths II
+64. Minimum Path Sum
+
+字符串二维：
+按照字符串长度建立二维数组，多了0的情况
+1.两个字符串
+2.一个字符串
+
+72. Edit Distance
+followup: 判断两个字符串之间只差一步
+
+87. Scramble String
+
+
+
+
+
