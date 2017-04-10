@@ -46,11 +46,19 @@ followup: 判断两个字符串之间只差一步
 139. Word Break
 140. Word Break II
 
+279. Perfect Squares
+300. Longest Increasing Subsequence
+354	Russian Doll Envelopes
+followup: 最长连续递增子数组
+
 
 刷房子问题：
 256	Paint House
 265	Paint House II
 
 
+背包问题：
 
+
+after 300
 背包问题：
