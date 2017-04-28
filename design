@@ -25,7 +25,7 @@ CAP理论
 多种一致性模型，强一致性，最终一致性（消息系统）
 没有最好，永远都是根据具体需求平衡
 
-分块：
+分块／副本：
 一致性hash
 http://www.cnblogs.com/hjwublog/p/5625275.html
 主从模型、多主
@@ -42,17 +42,57 @@ leasing机制
 
 keep alive原理
 
+搜索引擎的原理／索引搜索的原理
+
 ***典型参考GFS、Facebook图片存储系统Haystack
+
 
 
 
 2.Web系统
 
-3.OOAD
+cookie／session原理／http无状态模式
 
-4.数据库
+loadbalancer原理（http无状态密切相关）
+
+缓存问题／策略（多级缓存，http，后端，CDN）
+
+异步消息系统（系统规模大的话）
+
+Facebook推拉的模式，以及实际设计中两者结合的模式
+
+twitter tiny URL的问题
+
+Uber系统的设计，geo hash
+
+秒杀系统怎么抗大流量，不超卖，数据一致性
+
+
+
+3.数据库
+
+SQL 熟悉各种常见查询，连接，更新
+
+NOSql：  
+  了解memcache or redis原理和特性
+  mongoDB了解存储模式即可
+
+数据库和缓存的配合
+
+
+
+4.OOAD
+
+深刻理解基本OO概念（抽象类，接口，继承，多态）
+
+深刻理解SOLID原则，以及具体代码中的表现模式
+
+熟悉23中设计模式，灵活运用
+
+
+车库设计，电梯设计
+
 
 推荐的材料：
-
 https://github.com/checkcheckzz/system-design-interview
 https://www.hiredintech.com/app#system-design
