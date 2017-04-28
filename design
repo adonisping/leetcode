@@ -53,6 +53,8 @@ keep alive原理
 
 cookie／session原理／http无状态模式
 
+DNS解析原理／智能DNS
+
 loadbalancer原理（http无状态密切相关）
 
 缓存问题／策略（多级缓存，http，后端，CDN）
