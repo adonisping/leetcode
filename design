@@ -1,0 +1,33 @@
+System Design基本就是把对方当作PM，他推出简单需求，你跟他沟通弄清楚详细需求，限制，估算吞吐量，然后设计，load balance, caching, replica, 。。。
+
+- Use Case & Constraint
+  澄清需求，哪些限制。
+
+- High-level design
+  charting front-end, back-end, data tier ...
+  画图，大框架即可。
+
+- Detailed design
+  - front-end
+  - back-end service
+  - communication protocol
+  - data storage choice
+
+  - Load estimation -> load balance (consistent hasing)?
+  - caching? -> memcached?
+  - Reliability -> db replica
+  - scale up -> vertical scale up -> horizontal scale up -> dynamically scale up (consistent hashing).
+
+
+1.分布式系统
+
+2.Web系统
+
+3.OOAD
+
+4.数据库
+
+推荐的材料：
+
+https://github.com/checkcheckzz/system-design-interview
+https://www.hiredintech.com/app#system-design
