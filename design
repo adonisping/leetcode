@@ -21,6 +21,31 @@ System Design基本就是把对方当作PM，他推出简单需求，你跟他�
 
 1.分布式系统
 
+CAP理论
+多种一致性模型，强一致性，最终一致性（消息系统）
+没有最好，永远都是根据具体需求平衡
+
+分块：
+一致性hash
+http://www.cnblogs.com/hjwublog/p/5625275.html
+主从模型、多主
+
+事务2pc 3pc／分布式事务原理
+
+Paxos算法（只需知道大概原理和应用即可），可以参考zookeeper的应用
+
+NWR模型
+
+缓存算法LRU
+
+leasing机制
+
+keep alive原理
+
+***典型参考GFS、Facebook图片存储系统Haystack
+
+
+
 2.Web系统
 
 3.OOAD
